@@ -28,7 +28,7 @@ class Header extends React.Component {
         valueText: ""
     }
     componentDidMount(){
-        //setInterval(this.props.updatefecha, 1000)
+        setInterval(this.props.updatefecha, 1000)
     }
     onChangeSearch = (e) => {
         const {value} = e.target
