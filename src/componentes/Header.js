@@ -51,7 +51,7 @@ class Header extends React.Component {
     render(){
         return(
             <Contenedor>
-                <h3>PageMovie Online</h3>
+                <h3>PageMovies Blog</h3>
                 {this.props.path === "/" && <Search onChangeSearch = {this.onChangeSearch} onClean={this.onClean} valueText={this.state.valueText}/>}
                 <Fecha>{this.props.test.fecha.toLocaleString()}</Fecha>
             </Contenedor>
