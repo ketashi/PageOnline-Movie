@@ -17,7 +17,7 @@ const Item = styled(Link) `
 export default ({listSearch}) => (
     <Container>
            {listSearch.map(item => (
-            <Item key={item.id} item={item} to={`pageDetails/${item.id}`}>{item.title}</Item>
+            <Item key={item.id} item={item} to={`pageDetails/${item.id}`}></Item>
            ))
            }
     </Container>

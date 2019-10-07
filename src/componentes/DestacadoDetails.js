@@ -34,7 +34,12 @@ const VotoPromedio = styled.span`
     color: rgba(100,221,23,1);
     font-family:"Cinzel", serif;
 `
-export default ({peliculas}) => (
+const TrailerContainer = styled.div `
+`
+const Trailer = styled.iframe `
+`
+
+export default ({peliculas,trailer}) => (
     <Inicio pelicula={peliculas}>
         <PeliculaInfo>
             <PeliculaContent>
@@ -43,5 +48,13 @@ export default ({peliculas}) => (
                 <VotoPromedio>{peliculas.vote_average}/10</VotoPromedio>
             </PeliculaContent>
         </PeliculaInfo>
+        <TrailerContainer>
+        {
+            trailer.map(data => 
+                <Trailer  width="560" height="315" src= {`https://www.youtube.com/embed/${data.key}`} allowfullscreen></Trailer>
+            )
+        }
+            
+        </TrailerContainer>
     </Inicio>
 )

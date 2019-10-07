@@ -46,3 +46,10 @@ export const getResetText = () =>{
         type: tipo.GET_RESET_DATA
     })
 }
+
+export const getTrailerMovie = (idpelicula) => dispatch=> {
+    dispatch({
+        type: tipo.GET_TRAILER_MOVIE,
+        payload: axios.get(`${urlBase}${idpelicula}/videos?api_key=${key}&${lenguage}`)
+    })
+}
